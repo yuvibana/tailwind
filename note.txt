@@ -1,0 +1,21 @@
+setup of tailwindcss 
+step 1 ) npm init i
+step 2 ) npm install -D tailwindcss postcss-cli autoprefixer
+step 3 ) create a file name = postcss.config.js
+step 3 ) setup 👇👇
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./foldername/**/*.html"], 👉 content: ["./public/**/*.html"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+step 4 ) open package.json update scripts
+
+"scripts": {
+    // "test": "echo \"Error: no test specified\" && exit 1" 👉 "watch": "postcss ./src/css/tailwind.css -o ./public/output.css --watch"
+  },
+
+  start 6 ) npm run watch => this is coming from package.json "scripts"
